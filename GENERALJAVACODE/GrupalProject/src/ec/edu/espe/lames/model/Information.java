@@ -10,5 +10,32 @@ package ec.edu.espe.lames.model;
  * @author LAMESTech ESPE-DCC0
  */
 public class Information {
+    private String info;
+
+    @Override
+    public String toString() {
+        return "Information{" + "info=" + info + '}';
+    }
+
+    public Information(String info) {
+        this.info = info;
+    }
+    
+       
+    /**
+     * @return the info
+     */
+    public String getInfo() {
+        return info;
+    }
+
+    /**
+     * @param info the info to set
+     */
+    public void setInfo(String info) {
+        this.info = info;
+    }
+    
+    
     
 }
