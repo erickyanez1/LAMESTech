@@ -35,6 +35,8 @@ public class Interface {
         this.materialList = materialList;
     }
 
+    
+
     @Override
     public String toString() {
         return "Interface{" + "speed=" + isSpeed() + ", safe=" + isSafe() + ", name=" + getName() + ", quantityOfMaterials=" + getQuantityOfMaterials() + ", materialList=" + getMaterialList() + ", electronicMaterial=" + getElectronicMaterial() + '}';
