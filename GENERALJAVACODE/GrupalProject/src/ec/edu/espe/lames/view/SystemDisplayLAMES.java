@@ -45,6 +45,9 @@ public class SystemDisplayLAMES {
                     System.out.println("\nDipswitch\tCapacitor\tPotentiometer\tTransistor\tProtoboard");
                     System.out.println("$0.70 - $1.20\t$0.60 - $1.00\t$0.80 - $1.25\t$0.70 - $1.00\t$18.00 - $5.00");
                     System.out.println("A  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B");
+                    System.out.println("\nMultimeter\tUTPCable\tLizardWire\tArduinos");
+                    System.out.println("$15.00 - $50.00\t$0.40 - $1.30\t$0.35 - $1.25\t$7.00 - $14.00");
+                    System.out.println("A  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B\t\n");
                     
                     System.out.println("Enter the name of the Product");
                     name = sn.next();
@@ -70,8 +73,10 @@ public class SystemDisplayLAMES {
 
                     break;
                 case 3:
+                    System.out.println("exit");
                     break;
                 default:
+                    System.out.println("invalid option");
             }
         } while (option != 3);
 
