@@ -5,8 +5,6 @@
  */
 package ec.edu.espe.lames.model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author LAMESTech ESPE-DCC0
