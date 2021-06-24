@@ -32,9 +32,9 @@ public class SystemDisplayLAMES {
         
 
         do {
-            System.out.println("1.Product List");
-            System.out.println("2.- Save to Json\n");
-            System.out.println("3.-Go to the cart\n");
+            System.out.println("\t1.-Product List");
+            System.out.println("\t2.- Save to Json");
+            System.out.println("\t3.-Go to the cart\n");
             option = sn.nextInt();
             switch (option) {
                 case 1:
