@@ -13,28 +13,20 @@ import java.util.ArrayList;
  */
 public class ElectronicMaterial {
     private String name;
-    private String color;
+    private String fabricator;
     private float cost;
-    private String typeOfMaterial;
-    private ArrayList<Information>information = new ArrayList <>();
-
-    ElectronicMaterial() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //private String typeOfMaterial;
+   // private ArrayList<Information>information = new ArrayList <>();
 
     @Override
     public String toString() {
-        return "ElectronicMaterial{" + "name=" + getName() + ", color=" + getColor() + ", cost=" + getCost() + ", typeOfMaterial=" + getTypeOfMaterial() + ", information=" + getInformation() + '}';
+        return "ElectronicMaterial{" + "name=" + name + ", fabricator=" + fabricator + ", cost=" + cost + '}';
     }
 
-    public ElectronicMaterial(String name, String color, String typeOfMaterial) {
+    public ElectronicMaterial(String name, String fabricator, float cost) {
         this.name = name;
-        this.color = color;
-        this.typeOfMaterial = typeOfMaterial;
-    }
-   
-    public static void searchInformation(){
-        
+        this.fabricator = fabricator;
+        this.cost = cost;
     }
 
     /**
@@ -52,17 +44,17 @@ public class ElectronicMaterial {
     }
 
     /**
-     * @return the color
+     * @return the fabricator
      */
-    public String getColor() {
-        return color;
+    public String getFabricator() {
+        return fabricator;
     }
 
     /**
-     * @param color the color to set
+     * @param fabricator the fabricator to set
      */
-    public void setColor(String color) {
-        this.color = color;
+    public void setFabricator(String fabricator) {
+        this.fabricator = fabricator;
     }
 
     /**
@@ -79,31 +71,5 @@ public class ElectronicMaterial {
         this.cost = cost;
     }
 
-    /**
-     * @return the typeOfMaterial
-     */
-    public String getTypeOfMaterial() {
-        return typeOfMaterial;
-    }
-
-    /**
-     * @param typeOfMaterial the typeOfMaterial to set
-     */
-    public void setTypeOfMaterial(String typeOfMaterial) {
-        this.typeOfMaterial = typeOfMaterial;
-    }
-
-    /**
-     * @return the information
-     */
-    public ArrayList<Information> getInformation() {
-        return information;
-    }
-
-    /**
-     * @param information the information to set
-     */
-    public void setInformation(ArrayList<Information> information) {
-        this.information = information;
-    }
+   
 }

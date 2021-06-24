@@ -19,6 +19,20 @@ public class Owner {
      
     }
 
+    @Override
+    public String toString() {
+        return "Owner{" + "name=" + name + ", lastName=" + lastName + ", age=" + age + ", gender=" + gender + '}';
+    }
+
+    public Owner(String name, String lastName, int age, String gender) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+    }
+    
+    
+    
     /**
      * @return the name
      */

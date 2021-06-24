@@ -6,6 +6,7 @@
 package ec.edu.espe.lames.view;
 
 import java.util.Scanner;
+import ec.edu.espe.lames.model.ElectronicMaterial;
 
 /**
  *
@@ -13,78 +14,21 @@ import java.util.Scanner;
  */
 public class SystemDisplayLAMES {
     public static void main(String[] args) {
-        System.out.println("LAMESTech");
+        System.out.println("☻ Welcome to LAMESTech ☻");
         
-    boolean salir = false; 
-    int option;
+        String name;
+        String fabricator;
+        float cost;
         
+        int option = 0;
+        Scanner sn = new Scanner(System.in);
         
-    while (!salir) {
-     Scanner sn = new Scanner(System.in);
-     System.out.println("Choose the material you want to search \n ");
-     System.out.println("1. 9V battery ");
-     System.out.println("2. Led Diodes ");
-     System.out.println("3. Resistors ");
-     System.out.println("4. Integrate circuits ");
-     System.out.println("5. Dipswitch ");
-     System.out.println("6. Capacitors ");
-     System.out.println("7. Potentiometer ");
-     System.out.println("8. Transistor ");
-     System.out.println("9. Protoboard ");
-     System.out.println("10. Multimeter ");
-     System.out.println("11. Salir");
-
-     System.out.println("Enter a number ");
-     option = sn.nextInt();   
-     switch (option) {
-         case 1:
+        ElectronicMaterial em [] = new ElectronicMaterial[10];
+        
+        System.out.println("9VBattery\tLEDDiodes\tResistor\tIntegratedCircuit");
+        System.out.println("$3.00 - $2\t$0.25 - $0.50\t$0.20 - $0.30\t$0.80 - $1.50");
+        System.out.println("A  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B\t");
+        
             
-         break;
-             
-         case 2:
-            
-         break;
-         
-         case 3:
-            
-         break;
-             
-         case 4:
-            
-         break;
-             
-         case 5:
-            
-         break;
-             
-         case 6:
-            
-         break;
-             
-         case 7:
-            
-         break;
-         
-         case 8:
-            
-         break;
-         
-         case 9:
-            
-         break;
-             
-         case 10:
-            
-         break;
-         
-         case 11:
-            salir = true;
-            break;
-         default:
-            System.out.println("Invalid option, enter again.");
-             
-     }   
-    }   
-     
     }
 }
