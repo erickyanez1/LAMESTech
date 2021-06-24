@@ -14,7 +14,7 @@ public class User {
     private String lastName;
     private int age;
     private String gender;
-    public SearchElement i (ElectronicMaterial electronicMaterial){
+    public SearchElement se (ElectronicMaterial electronicMaterial){
         SearchElement searchElement = new SearchElement();
         
         return searchElement;

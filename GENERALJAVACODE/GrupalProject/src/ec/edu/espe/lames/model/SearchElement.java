@@ -7,7 +7,7 @@ package ec.edu.espe.lames.model;
 
 /**
  *
- * @author Pamela Yugsi LAMESTech ESPE-DCCO
+ * @author LAMESTech ESPE-DCC0
  */
 class SearchElement {
     
