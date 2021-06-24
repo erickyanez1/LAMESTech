@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.lames.view;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.util.Scanner;
 import ec.edu.espe.lames.model.ElectronicMaterial;
 import java.io.FileWriter;
@@ -38,9 +40,21 @@ public class SystemDisplayLAMES {
         
         switch(option){
             case 1:
-                
+                System.out.println("Enter the name of the Product");
+                name = sn.next();
+                System.out.println("Select the cost");
+                cost = sn.nextFloat();
+                System.out.println("Select the Fabricator");
+                fabricator = sn.next();
+                electronicMaterial = new ElectronicMaterial(name,fabricator,cost);
+                GsonBuilder gsonBuilder = new GsonBuilder();
+                Gson gson = gsonBuilder.create();
+                jsonElectronicMaterial= gson.toJson(electronicMaterial);
+            break;   
             case 2:
+            break;
             case 3:
+            break;    
             default: 
         }
         }while(option != 3);
@@ -49,13 +63,7 @@ public class SystemDisplayLAMES {
         
         
         for(int i = 0; i < option; i++){
-            System.out.println("Enter the name of the Product");
-            name = sn.next();
-            System.out.println("Select the cost");
-            cost = sn.nextFloat();
-            System.out.println("Select the Fabricator");
-            fabricator = sn.next();
-            em[i] = new ElectronicMaterial(name, fabricator, cost);
+            
         }  
         
        for(int i = 0; i<option; i++){
