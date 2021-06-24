@@ -40,6 +40,7 @@ public class SystemDisplayLAMES {
             System.out.println("Select the Fabricator");
             fabricator = sn.next();
             em[i] = new ElectronicMaterial(name, fabricator, cost);
+ 
         }  
         
        for(int i = 0; i<option; i++){

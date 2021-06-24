@@ -18,15 +18,7 @@ public class Interface {
    private String name;
    private String quantityOfMaterials;
    private String materialList;
-   //private ArrayList<ElectronicMaterial>electronicMaterial = new ArrayList <>();
    
-   
- /* public ElectronicMaterial saveInformation(){
-      
-      ElectronicMaterial electronicMaterial = new ElectronicMaterial();
-      return electronicMaterial;
-  }*/
-
     public Interface(boolean speed, boolean safe, String name, String quantityOfMaterials, String materialList) {
         this.speed = speed;
         this.safe = safe;
@@ -37,14 +29,6 @@ public class Interface {
 
     
 
-  /*  @Override
-    public String toString() {
-        return "Interface{" + "speed=" + isSpeed() + ", safe=" + isSafe() + ", name=" + getName() + ", quantityOfMaterials=" + getQuantityOfMaterials() + ", materialList=" + getMaterialList() + ", electronicMaterial=" + getElectronicMaterial() + '}';
-    }*/
-
-    /**
-     * @return the speed
-     */
     public boolean isSpeed() {
         return speed;
     }
@@ -112,19 +96,4 @@ public class Interface {
         this.materialList = materialList;
     }
 
-    /**
-     * @return the electronicMaterial
-     */
-   // public ArrayList<ElectronicMaterial> getElectronicMaterial() {
-  //      return electronicMaterial;
-  //  }
-
-    /**
-     * @param electronicMaterial the electronicMaterial to set
-     */
-   /*public void setElectronicMaterial(ArrayList<ElectronicMaterial> electronicMaterial) {
-        this.electronicMaterial = electronicMaterial;
-    }*/
-   
-   
 }
