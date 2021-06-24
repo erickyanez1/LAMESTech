@@ -29,6 +29,14 @@ public class SystemDisplayLAMES {
         System.out.println("$3.00 - $2\t$0.25 - $0.50\t$0.20 - $0.30\t$0.80 - $1.50");
         System.out.println("A  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B\t");
         
-            
+        for(int i = 0; i < option; i++){
+            System.out.println("Enter the name of the Product");
+            name = sn.next();
+            System.out.println("Select the cost");
+            cost = sn.nextFloat();
+            System.out.println("Select the Fabricator");
+            fabricator = sn.next();
+            em[i] = new ElectronicMaterial(name, fabricator, cost);
+        }    
     }
 }
