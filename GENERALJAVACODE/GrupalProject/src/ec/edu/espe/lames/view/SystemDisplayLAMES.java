@@ -26,7 +26,7 @@ public class SystemDisplayLAMES {
         System.out.println("Owners\n- Leslie Titoaña\n- Solange Tupiza\n- Alina Villavicencio\n- Erick Yánez\n- María Yugsi\n");
 
         String name;
-        String lastname;
+        String lastName;
         int age;
         String fabricator;
         float cost;
@@ -44,7 +44,7 @@ public class SystemDisplayLAMES {
         System.out.println("Enter username");
         name = sn.next();
         System.out.println("Enter lastname");
-        lastname = sn.next();
+        lastName = sn.next();
         System.out.println("Enter age");
         age = sn.nextInt();
         while ((login != 12345) || (pass != 12345) && (attempts < high)) {
