@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.Scanner;
 import ec.edu.espe.lames.model.ElectronicMaterial;
+import ec.edu.espe.lames.model.Owner;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -23,13 +24,44 @@ public class SystemDisplayLAMES {
         System.out.println("Owners\n- Leslie Titoaña\n- Solange Tupiza\n- Alina Villavicencio\n- Erick Yánez\n- María Yugsi\n");
 
         String name;
+        String lastname;
+        int age;
         String fabricator;
         float cost;
+        int login = 0;
+        int pass = 0;
+        int attempts = 1;
+        int high = 1;
         String jsonElectronicMaterial = "";
 
         ElectronicMaterial electronicMaterial[] = new ElectronicMaterial[10];
 
         Scanner sn = new Scanner(System.in);
+
+        System.out.println("Enter username");
+        name = sn.next();
+        System.out.println("Enter lastname");
+        lastname = sn.next();
+        System.out.println("Enter age");
+        age = sn.nextInt();
+        while ((login != 12345) || (pass != 12345) && (attempts < high)) {
+
+            System.out.print("Enter a login: ");
+            login = sn.nextInt();
+            System.out.print("Enter your pass:");
+            pass = sn.nextInt();
+
+            if (attempts == 3) {
+                System.out.println("access denied..");
+                attempts = attempts - high;
+            }
+
+            attempts++;
+
+        }
+
+        System.out.println("login and pass, correct ...");
+
         int option;
         FileWriter file = new FileWriter("./files/ElectronicMaterial.json");
 
