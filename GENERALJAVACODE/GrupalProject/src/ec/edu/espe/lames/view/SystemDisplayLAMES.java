@@ -55,13 +55,51 @@ public class SystemDisplayLAMES {
                     System.out.println("A  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B\t\n");
 
                     break;
-                
-                
-                    
+
+                case 2:
+                    //JSON FILE
+
+                    System.out.println("How many items do you want?");
+                    option = sn.nextInt();
+
+                    for (int i = 0; i < option; i++) {
+                        System.out.println("Enter the name of the Product[" + (i + 1) + "]");
+                        name = sn.next();
+                        System.out.println("Select the cost");
+                        cost = sn.nextFloat();
+                        System.out.println("Select the Fabricator");
+                        fabricator = sn.next();
+
+                        electronicMaterial[i] = new ElectronicMaterial(name, fabricator, cost);
+
+                    }
+
+                    for (int i = 0; i < option; i++) {
+                        System.out.println(electronicMaterial[i]);
+                        GsonBuilder gsonBuilder = new GsonBuilder();
+                        Gson gson = gsonBuilder.create();
+                        jsonElectronicMaterial = gson.toJson(electronicMaterial[i]);
+                        try {
+                            file.append(jsonElectronicMaterial);
+                            file.flush();
+                            file.close();
+
+                        } catch (IOException e) {
+
+                        }
+
+                        ElectronicMaterial electronicMaterials;
+                        electronicMaterials = gson.fromJson(jsonElectronicMaterial, ElectronicMaterial.class);
+                        System.out.println("jsonElectronicMaterial: " + jsonElectronicMaterial);
+                        System.out.println("\n");
+
+                    }
+
+                    break;
+
                 case 3:
                     //CSV FILE
-                    
-                    
+
                     break;
                 case 4:
                     System.out.println("EXIT");
