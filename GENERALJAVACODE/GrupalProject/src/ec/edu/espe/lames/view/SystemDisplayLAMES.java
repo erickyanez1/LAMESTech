@@ -10,7 +10,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.Scanner;
 import ec.edu.espe.lames.model.ElectronicMaterial;
-import ec.edu.espe.lames.model.Owner;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -92,8 +91,7 @@ public class SystemDisplayLAMES {
                     break;
 
                 case 2:
-                    //JSON FILE
-
+                    
                     System.out.println("How many items do you want?");
                     option = sn.nextInt();
 
@@ -133,7 +131,7 @@ public class SystemDisplayLAMES {
                     break;
 
                 case 3:
-                    //CSV FILE
+                    
                     System.out.println("How many items do you want?");
                     option = sn.nextInt();
 
