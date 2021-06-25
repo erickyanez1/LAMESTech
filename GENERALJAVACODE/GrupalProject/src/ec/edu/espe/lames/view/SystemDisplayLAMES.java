@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.lames.view;
 
+import com.csvreader.CsvWriter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.Scanner;
@@ -12,6 +13,7 @@ import ec.edu.espe.lames.model.ElectronicMaterial;
 import ec.edu.espe.lames.model.Owner;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  *
@@ -35,6 +37,7 @@ public class SystemDisplayLAMES {
         String jsonElectronicMaterial = "";
 
         ElectronicMaterial electronicMaterial[] = new ElectronicMaterial[10];
+        ArrayList<ElectronicMaterial> em = new ArrayList();
 
         Scanner sn = new Scanner(System.in);
 
@@ -131,7 +134,27 @@ public class SystemDisplayLAMES {
 
                 case 3:
                     //CSV FILE
+                    System.out.println("How many items do you want?");
+                    option = sn.nextInt();
 
+                    for (int i = 0; i < option; i++) {
+                        System.out.println("Enter the name of the Product[" + (i+1) + "]");
+                        name = sn.next();
+                        System.out.println("Select the cost");
+                        cost = sn.nextFloat();
+                        System.out.println("Select the Fabricator");
+                        fabricator = sn.next();
+
+                        //electronicMaterial[i] = new ElectronicMaterial(name, fabricator, cost);
+                        
+                        em.add(new ElectronicMaterial(name, fabricator,cost));
+                        CsvWriter csvWriter = new CsvWriter("./files/electronicMaterial.csv");
+                        for (ElectronicMaterial electronicMaterial1 : em) {
+                            String[] information = electronicMaterial1.getArray();
+                            csvWriter.writeRecord(information);
+                        }
+                    csvWriter.close();
+                    }
                     break;
                 case 4:
                     System.out.println("EXIT");
@@ -139,7 +162,7 @@ public class SystemDisplayLAMES {
                 default:
                     System.out.println("invalid option");
             }
-        } while (option != 3);
+        } while (option != 4);
 
     }
 }

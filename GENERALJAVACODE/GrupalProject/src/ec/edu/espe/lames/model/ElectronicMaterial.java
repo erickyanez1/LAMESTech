@@ -68,6 +68,10 @@ public class ElectronicMaterial {
     public void setCost(float cost) {
         this.cost = cost;
     }
+    public String [] getArray(){
+        String [] information = {name,fabricator,String.valueOf(cost)};
+        return information;
+    }
 
    
 }
