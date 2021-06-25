@@ -20,22 +20,27 @@ public class SystemDisplayLAMES {
 
     public static void main(String[] args) throws IOException {
         System.out.println("☻ Welcome to LAMESTech ☻");
-        ElectronicMaterial electronicMaterial;
+        System.out.println("Owners\n- Leslie Titoaña\n- Solange Tupiza\n- Alina Villavicencio\n- Erick Yánez\n- María Yugsi\n");
+
         String name;
         String fabricator;
         float cost;
         String jsonElectronicMaterial = "";
-        
+
+        ElectronicMaterial electronicMaterial[] = new ElectronicMaterial[10];
+
         Scanner sn = new Scanner(System.in);
         int option;
         FileWriter file = new FileWriter("./files/ElectronicMaterial.json");
-        
 
         do {
-            System.out.println("\t1.-Product List");
-            System.out.println("\t2.- Save to Json");
-            System.out.println("\t3.-Go to the cart\n");
+            System.out.println("1. Product List");
+            System.out.println("2. Select products and save to Json");
+            System.out.println("3. Select products and save to CSV");
+            System.out.println("4. Exit");
+
             option = sn.nextInt();
+
             switch (option) {
                 case 1:
 
@@ -48,32 +53,18 @@ public class SystemDisplayLAMES {
                     System.out.println("\nMultimeter\tUTPCable\tLizardWire\tArduinos");
                     System.out.println("$15.00 - $50.00\t$0.40 - $1.30\t$0.35 - $1.25\t$7.00 - $14.00");
                     System.out.println("A  -  B\t\tA  -  B\t\tA  -  B\t\tA  -  B\t\n");
+
+                    break;
+                
+                
                     
-                    System.out.println("Enter the name of the Product");
-                    name = sn.next();
-                    System.out.println("Select the cost");
-                    cost = sn.nextFloat();
-                    System.out.println("Select the Fabricator");
-                    fabricator = sn.next();
-                    electronicMaterial = new ElectronicMaterial(name, fabricator, cost);
-                    GsonBuilder gsonBuilder = new GsonBuilder();
-                    Gson gson = gsonBuilder.create();
-                    jsonElectronicMaterial = gson.toJson(electronicMaterial);
-                    try {
-                        file.append(jsonElectronicMaterial);
-                        file.flush();
-                        file.close();
-
-                    } catch (IOException e) {
-
-                    }
-
-                    break;
-                case 2:
-
-                    break;
                 case 3:
-                    System.out.println("exit");
+                    //CSV FILE
+                    
+                    
+                    break;
+                case 4:
+                    System.out.println("EXIT");
                     break;
                 default:
                     System.out.println("invalid option");
