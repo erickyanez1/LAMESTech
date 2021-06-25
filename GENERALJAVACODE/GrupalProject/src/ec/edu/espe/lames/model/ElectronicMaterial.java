@@ -15,8 +15,6 @@ public class ElectronicMaterial {
     private String name;
     private String fabricator;
     private float cost;
-    //private String typeOfMaterial;
-   // private ArrayList<Information>information = new ArrayList <>();
 
     @Override
     public String toString() {
