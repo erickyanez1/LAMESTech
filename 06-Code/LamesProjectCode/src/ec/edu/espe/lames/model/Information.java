@@ -9,6 +9,7 @@ package ec.edu.espe.lames.model;
  *
  * @author LAMESTech ESPE-DCC0
  */
+
 public class Information {
     private String info;
 
