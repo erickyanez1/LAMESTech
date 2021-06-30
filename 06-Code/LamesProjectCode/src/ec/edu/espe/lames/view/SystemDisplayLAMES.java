@@ -24,11 +24,6 @@ public class SystemDisplayLAMES {
         System.out.println("☻ Welcome to LAMESTech ☻");
         System.out.println("Owners\n- Leslie Titoaña\n- Solange Tupiza\n- Alina Villavicencio\n- Erick Yánez\n- María Yugsi\n");
 
-        String name;
-        String lastName;
-        int age;
-        String fabricator;
-        float cost;
         int login = 0;
         int pass = 0;
         int attempts = 1;
@@ -41,11 +36,12 @@ public class SystemDisplayLAMES {
         Scanner sn = new Scanner(System.in);
 
         System.out.println("Enter username");
-        name = sn.next();
+        String userName = sn.next();
         System.out.println("Enter lastname");
-        lastName = sn.next();
+        String lastName = sn.next();
         System.out.println("Enter age");
-        age = sn.nextInt();
+        int age = sn.nextInt();
+        
         while ((login != 12345) || (pass != 12345) && (attempts < high)) {
 
             System.out.print("Enter a login: ");
@@ -97,11 +93,11 @@ public class SystemDisplayLAMES {
 
                     for (int i = 0; i < option; i++) {
                         System.out.println("Enter the name of the Product[" + (i + 1) + "]");
-                        name = sn.next();
+                        String name = sn.next();
                         System.out.println("Select the cost");
-                        cost = sn.nextFloat();
+                        float cost = sn.nextFloat();
                         System.out.println("Select the Fabricator");
-                        fabricator = sn.next();
+                        String fabricator = sn.next();
 
                         electronicMaterial[i] = new ElectronicMaterial(name, fabricator, cost);
 
@@ -137,11 +133,11 @@ public class SystemDisplayLAMES {
 
                     for (int i = 0; i < option; i++) {
                         System.out.println("Enter the name of the Product[" + (i+1) + "]");
-                        name = sn.next();
+                        String name = sn.next();
                         System.out.println("Select the cost");
-                        cost = sn.nextFloat();
+                        float cost = sn.nextFloat();
                         System.out.println("Select the Fabricator");
-                        fabricator = sn.next();
+                        String fabricator = sn.next();
 
                         //electronicMaterial[i] = new ElectronicMaterial(name, fabricator, cost);
                         
