@@ -48,7 +48,6 @@ public class InterfaceSystem extends javax.swing.JFrame {
         txtQuantity = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        cmbFabricator = new javax.swing.JComboBox();
         txtPrice = new javax.swing.JTextField();
         btnEnlist = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
@@ -61,6 +60,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JTextField();
+        btnA = new javax.swing.JRadioButton();
+        btnB = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,9 +85,12 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         jLabel6.setText("Amount:");
 
-        cmbFabricator.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B" }));
-
         btnEnlist.setText("Enlist");
+        btnEnlist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnlistActionPerformed(evt);
+            }
+        });
 
         btnClear.setText("Clear");
 
@@ -156,6 +160,10 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         jLabel7.setText("Total:");
 
+        btnA.setText("A");
+
+        btnB.setText("B");
+
         javax.swing.GroupLayout PnlTextLayout = new javax.swing.GroupLayout(PnlText);
         PnlText.setLayout(PnlTextLayout);
         PnlTextLayout.setHorizontalGroup(
@@ -172,7 +180,9 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnlTextLayout.createSequentialGroup()
-                        .addComponent(cmbFabricator, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnA)
+                            .addComponent(btnB))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PnlTextLayout.createSequentialGroup()
@@ -206,7 +216,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
             .addGroup(PnlTextLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(42, 42, 42)
+                .addGap(38, 38, 38)
                 .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
@@ -219,14 +229,17 @@ public class InterfaceSystem extends javax.swing.JFrame {
                     .addGroup(PnlTextLayout.createSequentialGroup()
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(cmbFabricator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabel5)
+                            .addComponent(btnA))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(btnB))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
+                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1)
                         .addComponent(btnEnlist)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -254,11 +267,22 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEnlistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnlistActionPerformed
+
+        arduinoPrice();
+        if(this.btnA.isSelected()|| this.btnB.isSelected()){
+            this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),"Arduino",this.txtId.getText(),this.txtQuantity.getText(),this.txtPrice.getText(),this.txtTotal.getText()});
+        }
+
+    }//GEN-LAST:event_btnEnlistActionPerformed
     DefaultTableModel model1 = new DefaultTableModel();
     public void arduinoPrice(){
         double price, total, quantity, id;
         if(lstProducts.getSelectedIndex()== 1){
-            if(this.cmbFabricator.getSelectedIndex()==1 || this.cmbFabricator.getSelectedIndex()== 2){
+            
+            if(this.btnA.isSelected()|| this.btnB.isSelected()){
+                
                 quantity = Double.parseDouble(this.txtQuantity.getText());
                 price = Double.parseDouble(this.txtPrice.getText());
                 total = (price * quantity);
@@ -306,11 +330,12 @@ public class InterfaceSystem extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PnlButtons;
     private javax.swing.JPanel PnlText;
+    private javax.swing.JRadioButton btnA;
     private javax.swing.JButton btnAdd;
+    private javax.swing.JRadioButton btnB;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnEnlist;
-    private javax.swing.JComboBox cmbFabricator;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
