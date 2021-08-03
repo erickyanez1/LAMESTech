@@ -7,7 +7,6 @@ package ec.edu.espe.lames.view;
 
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author Alina Villavicencio LAMESTech ESPE-DCCO
@@ -193,18 +192,21 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         String username = "lames@gmail.com";
         String password = "12345";
-        
+
         String Pass = new String(pswPassword.getPassword());
-        
-        if(txtEmail.getText().equals(username) && Pass.equals(password)){
-            
-            
-            
-        }
-        else{
+
+        if (txtEmail.getText().equals(username) && Pass.equals(password)) {
+
+            System.out.println("access");
+            JOptionPane.showMessageDialog(this, "Entering the system...");
+            /*InterfaceSystem is = new InterfaceSystem();
+            is.setVisible(true);
+            dispose();*/
+
+        } else {
             JOptionPane.showMessageDialog(this, "Username or Password Incorrect");
         }
-        
+
     }//GEN-LAST:event_btnLoginMouseClicked
 
     /**
