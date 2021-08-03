@@ -197,11 +197,10 @@ public class Login extends javax.swing.JFrame {
 
         if (txtEmail.getText().equals(username) && Pass.equals(password)) {
 
-            System.out.println("access");
             JOptionPane.showMessageDialog(this, "Entering the system...");
-            /*InterfaceSystem is = new InterfaceSystem();
+            InterfaceSystem is = new InterfaceSystem();
             is.setVisible(true);
-            dispose();*/
+            dispose();
 
         } else {
             JOptionPane.showMessageDialog(this, "Username or Password Incorrect");
