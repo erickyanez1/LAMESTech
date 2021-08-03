@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.lames.view;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Leslie Titoaña LAMES Tech ESPE-DCC0
@@ -16,6 +18,13 @@ public class InterfaceSystem extends javax.swing.JFrame {
      */
     public InterfaceSystem() {
         initComponents();
+        this.table.setModel(model1);
+        this.model1.addColumn("Product");
+        this.model1.addColumn("Fabricator");
+        this.model1.addColumn("Id");
+        this.model1.addColumn("Amount");
+        this.model1.addColumn("Price");
+
         
     }
 
@@ -45,7 +54,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         btnClear = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         PnlButtons = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
@@ -81,7 +90,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Purchase Detail"));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -92,7 +101,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(table);
 
         btnAdd.setText("Add to Json");
 
@@ -238,7 +247,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    DefaultTableModel model1 = new DefaultTableModel();
     /**
      * @param args the command line arguments
      */
@@ -292,8 +301,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JList lstProducts;
+    private javax.swing.JTable table;
     private javax.swing.JTextField txtAmount;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtPrice;
