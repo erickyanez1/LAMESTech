@@ -17,6 +17,7 @@ import java.util.List;
  * @author Pamela Yugsi LAMESTech ESPE-DCCO
  */
 public class LoginDAO {
+    //HOLA
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
