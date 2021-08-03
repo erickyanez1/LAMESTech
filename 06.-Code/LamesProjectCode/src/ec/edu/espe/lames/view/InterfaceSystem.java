@@ -18,7 +18,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
      */
     public InterfaceSystem() {
         initComponents();
-        this.table.setModel(model1);
+        this.jTable1.setModel(model1);
         this.model1.addColumn("Product");
         this.model1.addColumn("Fabricator");
         this.model1.addColumn("Id");
@@ -45,16 +45,16 @@ public class InterfaceSystem extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtPrice = new javax.swing.JTextField();
+        txtAmount = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         cmbFabricator = new javax.swing.JComboBox();
-        txtAmount = new javax.swing.JTextField();
+        txtPrice = new javax.swing.JTextField();
         bntEnlist = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         PnlButtons = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
@@ -90,7 +90,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Purchase Detail"));
 
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -101,7 +101,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane2.setViewportView(table);
+        jScrollPane2.setViewportView(jTable1);
 
         btnAdd.setText("Add to Json");
 
@@ -177,8 +177,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
                                     .addComponent(jLabel6))
                                 .addGap(41, 41, 41)
                                 .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                    .addComponent(txtAmount)))
+                                    .addComponent(txtAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                    .addComponent(txtPrice)))
                             .addGroup(PnlTextLayout.createSequentialGroup()
                                 .addComponent(bntEnlist)
                                 .addGap(76, 76, 76)
@@ -207,9 +207,9 @@ public class InterfaceSystem extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addGroup(PnlTextLayout.createSequentialGroup()
-                                .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
                                 .addComponent(txtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnClear))))
                     .addGroup(PnlTextLayout.createSequentialGroup()
@@ -301,8 +301,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JList lstProducts;
-    private javax.swing.JTable table;
     private javax.swing.JTextField txtAmount;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtPrice;
