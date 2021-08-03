@@ -3,6 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/SearchElement.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/login.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/Interface.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/Conexion.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/ElectronicMaterial.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/LoginDAO.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/System.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/Owner.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/User.java</file>
+            <file>file:/C:/Users/PERSONAL/Desktop/LamesProject/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/view/SystemDisplayLAMES.java</file>
+        </group>
+=======
+<<<<<<< HEAD
+        <group>
             <file>file:/C:/Users/Usuario/Desktop/LAMES/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/SearchElement.java</file>
             <file>file:/C:/Users/Usuario/Desktop/LAMES/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/Interface.java</file>
             <file>file:/C:/Users/Usuario/Desktop/LAMES/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/Owner.java</file>
@@ -13,5 +27,12 @@
             <file>file:/C:/Users/Usuario/Desktop/LAMES/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/model/ElectronicMaterial.java</file>
             <file>file:/C:/Users/Usuario/Desktop/LAMES/LAMESTech/06.-%20Code/LamesProjectCode/src/ec/edu/espe/lames/view/Login.java</file>
         </group>
+<<<<<<< HEAD
+=======
+=======
+        <group/>
+>>>>>>> f03ff53bf93ed089bb79ebe6a0f3e969d54dd088
+>>>>>>> 3a98f238370da9d8343bd5765d21cb9b03fd4248
+>>>>>>> 85bcf2bfd97d7f9bf02b7e0a131eb441fd55e2ff
     </open-files>
 </project-private>
