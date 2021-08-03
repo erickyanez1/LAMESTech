@@ -9,22 +9,19 @@ package ec.edu.espe.lames.model;
  *
  * @author LAMESTech ESPE-DCC0
  */
-public class Login {
+public class login {
     private String username;
     private String password;
-    public void loginStatus(){
-    }
 
-    @Override
-    public String toString() {
-        return "Login{" + "username=" + username + ", password=" + password + '}';
-    }
-
-    public Login(String username, String password) {
+    public login(String username, String password) {
         this.username = username;
         this.password = password;
     }
-    
+
+    public login() {
+        
+    }
+
     /**
      * @return the username
      */
@@ -52,4 +49,5 @@ public class Login {
     public void setPassword(String password) {
         this.password = password;
     }
+    
 }
