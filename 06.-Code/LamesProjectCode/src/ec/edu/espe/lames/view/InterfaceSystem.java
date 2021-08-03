@@ -45,12 +45,12 @@ public class InterfaceSystem extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtAmount = new javax.swing.JTextField();
+        txtQuantity = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         cmbFabricator = new javax.swing.JComboBox();
         txtPrice = new javax.swing.JTextField();
-        bntEnlist = new javax.swing.JButton();
+        btnEnlist = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -59,6 +59,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        txtTotal = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,7 +86,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         cmbFabricator.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B" }));
 
-        bntEnlist.setText("Enlist");
+        btnEnlist.setText("Enlist");
 
         btnClear.setText("Clear");
 
@@ -114,13 +116,13 @@ public class InterfaceSystem extends javax.swing.JFrame {
         PnlButtonsLayout.setHorizontalGroup(
             PnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlButtonsLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addContainerGap(102, Short.MAX_VALUE)
                 .addComponent(btnAdd)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addGap(131, 131, 131)
                 .addComponent(btnDelete)
-                .addGap(145, 145, 145)
+                .addGap(154, 154, 154)
                 .addComponent(jButton3)
-                .addGap(171, 171, 171))
+                .addGap(124, 124, 124))
         );
         PnlButtonsLayout.setVerticalGroup(
             PnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,6 +154,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 .addComponent(PnlButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jLabel7.setText("Total:");
+
         javax.swing.GroupLayout PnlTextLayout = new javax.swing.GroupLayout(PnlText);
         PnlText.setLayout(PnlTextLayout);
         PnlTextLayout.setHorizontalGroup(
@@ -172,17 +176,19 @@ public class InterfaceSystem extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PnlTextLayout.createSequentialGroup()
+                                .addComponent(btnEnlist)
+                                .addGap(76, 76, 76)
+                                .addComponent(btnClear))
+                            .addGroup(PnlTextLayout.createSequentialGroup()
                                 .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
-                                    .addComponent(jLabel6))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7))
                                 .addGap(41, 41, 41)
                                 .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                    .addComponent(txtPrice)))
-                            .addGroup(PnlTextLayout.createSequentialGroup()
-                                .addComponent(bntEnlist)
-                                .addGap(76, 76, 76)
-                                .addComponent(btnClear)))
+                                    .addComponent(txtQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                    .addComponent(txtPrice)
+                                    .addComponent(txtTotal))))
                         .addGap(98, 98, 98))
                     .addGroup(PnlTextLayout.createSequentialGroup()
                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,20 +206,17 @@ public class InterfaceSystem extends javax.swing.JFrame {
             .addGroup(PnlTextLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(42, 42, 42)
+                .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
                     .addGroup(PnlTextLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addGroup(PnlTextLayout.createSequentialGroup()
-                                .addComponent(txtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnClear))))
+                        .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnClear))
                     .addGroup(PnlTextLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(cmbFabricator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -224,7 +227,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
                             .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addGap(18, 18, 18)
-                        .addComponent(bntEnlist)))
+                        .addComponent(btnEnlist)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -248,6 +255,19 @@ public class InterfaceSystem extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     DefaultTableModel model1 = new DefaultTableModel();
+    public void arduinoPrice(){
+        double price, total, quantity, id;
+        if(lstProducts.getSelectedIndex()== 1){
+            if(this.cmbFabricator.getSelectedIndex()==1 || this.cmbFabricator.getSelectedIndex()== 2){
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = (price * quantity);
+                this.txtTotal.setText(String.valueOf(total));
+         
+            }
+            
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -286,10 +306,10 @@ public class InterfaceSystem extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PnlButtons;
     private javax.swing.JPanel PnlText;
-    private javax.swing.JButton bntEnlist;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnEnlist;
     private javax.swing.JComboBox cmbFabricator;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
@@ -298,13 +318,15 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JList lstProducts;
-    private javax.swing.JTextField txtAmount;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtPrice;
+    private javax.swing.JTextField txtQuantity;
+    private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
 }
