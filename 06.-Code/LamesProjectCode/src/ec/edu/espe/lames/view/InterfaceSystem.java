@@ -342,10 +342,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.txtQuantity.setText("");
         this.txtPrice.setText("");
         this.txtTotal.setText("");
-        this.txtId.setText("");
-        this.btnA.setText("");
-        this.btnB.setText("");
-        
+        this.txtId.setText("");      
     }//GEN-LAST:event_btnClearActionPerformed
 
     /**
