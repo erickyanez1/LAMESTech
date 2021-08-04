@@ -57,8 +57,9 @@ public class InterfaceSystem extends javax.swing.JFrame {
         PnlButtons = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnTotalPrice = new javax.swing.JButton();
         txtTotalPrice = new javax.swing.JTextField();
+        btnView = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JTextField();
         btnA = new javax.swing.JRadioButton();
@@ -115,28 +116,32 @@ public class InterfaceSystem extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        btnAdd.setText("Add to Json");
+        btnAdd.setText("Add");
 
         btnDelete.setText("Delete");
 
-        jButton3.setText("Total Price");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnTotalPrice.setText("Total Price");
+        btnTotalPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnTotalPriceActionPerformed(evt);
             }
         });
+
+        btnView.setText("View");
 
         javax.swing.GroupLayout PnlButtonsLayout = new javax.swing.GroupLayout(PnlButtons);
         PnlButtons.setLayout(PnlButtonsLayout);
         PnlButtonsLayout.setHorizontalGroup(
             PnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlButtonsLayout.createSequentialGroup()
-                .addContainerGap(102, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(btnAdd)
-                .addGap(131, 131, 131)
+                .addGap(62, 62, 62)
                 .addComponent(btnDelete)
-                .addGap(154, 154, 154)
-                .addComponent(jButton3)
+                .addGap(87, 87, 87)
+                .addComponent(btnView)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addComponent(btnTotalPrice)
                 .addGap(18, 18, 18)
                 .addComponent(txtTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -148,8 +153,9 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 .addGroup(PnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(btnDelete)
-                    .addComponent(jButton3)
-                    .addComponent(txtTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnTotalPrice)
+                    .addComponent(txtTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnView))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -189,34 +195,33 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnlTextLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnA)
-                            .addComponent(btnB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PnlTextLayout.createSequentialGroup()
-                                .addComponent(btnEnlist)
-                                .addGap(76, 76, 76)
-                                .addComponent(btnClear))
-                            .addGroup(PnlTextLayout.createSequentialGroup()
-                                .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7))
-                                .addGap(41, 41, 41)
-                                .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                    .addComponent(txtPrice)
-                                    .addComponent(txtTotal))))
-                        .addGap(98, 98, 98))
+                            .addComponent(btnB)))
                     .addGroup(PnlTextLayout.createSequentialGroup()
-                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnlTextLayout.createSequentialGroup()
+                        .addComponent(btnEnlist)
+                        .addGap(76, 76, 76)
+                        .addComponent(btnClear))
+                    .addGroup(PnlTextLayout.createSequentialGroup()
+                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addGap(41, 41, 41)
+                        .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                            .addComponent(txtPrice)
+                            .addComponent(txtTotal))))
+                .addGap(98, 98, 98))
             .addGroup(PnlTextLayout.createSequentialGroup()
                 .addGap(262, 262, 262)
                 .addComponent(jLabel1)
@@ -273,7 +278,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PnlText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,7 +359,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.txtId.setText("");      
     }//GEN-LAST:event_btnClearActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnTotalPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalPriceActionPerformed
         // TODO add your handling code here:
         double sum;
         double sum1 = 0;
@@ -367,7 +372,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         }
         txtTotalPrice.setText("$ " + String.valueOf(sum1));
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnTotalPriceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -413,7 +418,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnEnlist;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnTotalPrice;
+    private javax.swing.JButton btnView;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
