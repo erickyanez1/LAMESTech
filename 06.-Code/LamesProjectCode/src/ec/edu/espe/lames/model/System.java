@@ -10,5 +10,13 @@ package ec.edu.espe.lames.model;
  * @author LAMESTech ESPE-DCC0
  */
 public class System {
+
+    public System() {
+    }
+
+    @Override
+    public String toString() {
+        return "System{" + '}';
+    }
     
 }
