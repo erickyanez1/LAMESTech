@@ -70,7 +70,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         jLabel1.setText("Inventory");
 
         lstProducts.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Select...", "Arduino", "Battery(9V)", "Capacitor", "Dispswitch", "Integrated Circuit", "Led Diodes", "Lizard Wire", "Multimeter", "Potenciometer", "Protoboard", "Resistor", "Transistor", "UTP Cable", " " };
+            String[] strings = { "Select...", "1. Arduino", "2. Battery(9V)", "3. Capacitor", "4. Dispswitch", "5. Integrated Circuit", "6. Led Diodes", "7. Lizard Wire", "8. Multimeter", "9. Potenciometer", "10. Protoboard", "11. Resistor", "12. Transistor", "13. UTP Cable" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -292,9 +292,9 @@ public class InterfaceSystem extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnEnlistActionPerformed
-<<<<<<< HEAD
+
     
-=======
+
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
@@ -307,7 +307,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.txtPrice.setText("");
         this.txtTotal.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
->>>>>>> 3a18c5ac6705092c1a7953abdb05b258391e73c0
+
     DefaultTableModel model1 = new DefaultTableModel();
     
     
