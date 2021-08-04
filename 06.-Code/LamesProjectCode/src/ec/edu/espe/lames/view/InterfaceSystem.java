@@ -22,10 +22,10 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.model1.addColumn("Product");
         this.model1.addColumn("Fabricator");
         this.model1.addColumn("Id");
-        this.model1.addColumn("Amount");
+        this.model1.addColumn("Quantity");
         this.model1.addColumn("Price");
+        this.model1.addColumn("Total Price");
 
-        
     }
 
     /**
@@ -69,7 +69,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         jLabel1.setText("Inventory");
 
         lstProducts.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Arduino", "Battery(9V)", "Capacitor", "Dispswitch", "Integrated Circuit", "Led Diodes", "Lizard Wire", "Multimeter", "Potenciometer", "Protoboard", "Resistor", "Transistor", "UTP Cable", " " };
+            String[] strings = { "Select...", "1. Arduino", "2. Battery(9V)", "3. Capacitor", "4. Dispswitch", "5. Integrated Circuit", "6. Led Diodes", "7. Lizard Wire", "8. Multimeter", "9. Potenciometer", "10. Protoboard", "11. Resistor", "12. Transistor", "13. UTP Cable" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -83,7 +83,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         jLabel5.setText("Fabricator:");
 
-        jLabel6.setText("Amount:");
+        jLabel6.setText("Quantity");
 
         btnEnlist.setText("Enlist");
         btnEnlist.addActionListener(new java.awt.event.ActionListener() {
@@ -279,18 +279,65 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private void btnEnlistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnlistActionPerformed
 
         arduinoPrice();
-        if(this.btnA.isSelected()|| this.btnB.isSelected()){
-            this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),"Arduino",this.txtId.getText(),this.txtQuantity.getText(),this.txtPrice.getText(),this.txtTotal.getText()});
+        batteryPrice();
+
+        if (this.btnA.isSelected()) {
+            this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),
+                "A", this.txtId.getText(), this.txtQuantity.getText(),
+                this.txtPrice.getText(), this.txtTotal.getText()});
+        }
+
+        if (this.btnB.isSelected()) {
+            this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),
+                "B", this.txtId.getText(), this.txtQuantity.getText(),
+                this.txtPrice.getText(), this.txtTotal.getText()});
         }
 
     }//GEN-LAST:event_btnEnlistActionPerformed
 
+    DefaultTableModel model1 = new DefaultTableModel();
+
+    public void arduinoPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 1) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+
+    public void batteryPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 2) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+
+
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
         this.lstProducts.setSelectedIndex(0);
-        if(this.btnA.isSelected()){
+        if (this.btnA.isSelected()) {
         }
-        if(this.btnB.isSelected()){  
+        if (this.btnB.isSelected()) {
         }
         this.txtQuantity.setText("");
         this.txtPrice.setText("");
@@ -300,22 +347,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.btnB.setText("");
         
     }//GEN-LAST:event_btnClearActionPerformed
-    DefaultTableModel model1 = new DefaultTableModel();
-    public void arduinoPrice(){
-        double price, total, quantity, id;
-        if(lstProducts.getSelectedIndex()== 1){
-            
-            if(this.btnA.isSelected()|| this.btnB.isSelected()){
-                
-                quantity = Double.parseDouble(this.txtQuantity.getText());
-                price = Double.parseDouble(this.txtPrice.getText());
-                total = (price * quantity);
-                this.txtTotal.setText(String.valueOf(total));
-         
-            }
-            
-        }
-    }
+
     /**
      * @param args the command line arguments
      */
