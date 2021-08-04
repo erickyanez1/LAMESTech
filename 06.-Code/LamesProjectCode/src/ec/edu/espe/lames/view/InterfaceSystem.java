@@ -26,7 +26,6 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.model1.addColumn("Price");
         this.model1.addColumn("Total Price");
 
-        
     }
 
     /**
@@ -278,75 +277,70 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         arduinoPrice();
         batteryPrice();
-        
-         if(this.btnA.isSelected()){
-            this.model1.addRow(new Object[]{ this.lstProducts.getSelectedIndex(),
-                "A",this.txtId.getText(),this.txtQuantity.getText(),
-                this.txtPrice.getText(),this.txtTotal.getText()});
-        }
-        
-        if(this.btnB.isSelected()){
+
+        if (this.btnA.isSelected()) {
             this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),
-                        "B",this.txtId.getText(),this.txtQuantity.getText(),
-                this.txtPrice.getText(),this.txtTotal.getText()});
+                "A", this.txtId.getText(), this.txtQuantity.getText(),
+                this.txtPrice.getText(), this.txtTotal.getText()});
+        }
+
+        if (this.btnB.isSelected()) {
+            this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),
+                "B", this.txtId.getText(), this.txtQuantity.getText(),
+                this.txtPrice.getText(), this.txtTotal.getText()});
         }
 
     }//GEN-LAST:event_btnEnlistActionPerformed
 
-    
+    DefaultTableModel model1 = new DefaultTableModel();
+
+    public void arduinoPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 1) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+
+    public void batteryPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 2) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
 
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
         this.lstProducts.setSelectedIndex(0);
-        if(this.btnA.isSelected()){
+        if (this.btnA.isSelected()) {
         }
-        if(this.btnB.isSelected()){  
+        if (this.btnB.isSelected()) {
         }
         this.txtQuantity.setText("");
         this.txtPrice.setText("");
         this.txtTotal.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
-    DefaultTableModel model1 = new DefaultTableModel();
-    
-    
-    public void arduinoPrice(){
-        double price, total, quantity, id;
-        
-        if(lstProducts.getSelectedIndex()== 1 ){
-            
-            if(this.btnA.isSelected()|| this.btnB.isSelected()){
-                
-                quantity = Double.parseDouble(this.txtQuantity.getText());
-                price = Double.parseDouble(this.txtPrice.getText());
-                total = price * quantity;
-                this.txtTotal.setText(String.valueOf(total));
-            }
-            
-        }
- 
-    }
-    
-    public void batteryPrice(){
-        double price, total, quantity, id;
-        
-        if(lstProducts.getSelectedIndex()== 2){
-            
-            if(this.btnA.isSelected()|| this.btnB.isSelected()){
-                
-                quantity = Double.parseDouble(this.txtQuantity.getText());
-                price = Double.parseDouble(this.txtPrice.getText());
-                total = price * quantity;
-                this.txtTotal.setText(String.valueOf(total));
-            }
-            
-        }
- 
-    }
-    
-    
-    
     /**
      * @param args the command line arguments
      */
