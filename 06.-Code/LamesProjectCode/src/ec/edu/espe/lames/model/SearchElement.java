@@ -10,5 +10,13 @@ package ec.edu.espe.lames.model;
  * @author LAMESTech ESPE-DCC0
  */
 class SearchElement {
+
+    public SearchElement() {
+    }
+
+    @Override
+    public String toString() {
+        return "SearchElement{" + '}';
+    }
     
 }
