@@ -12,66 +12,93 @@ import java.util.ArrayList;
  * @author LAMESTech ESPE-DCC0
  */
 public class ElectronicMaterial {
-    private String name;
-    private String fabricator;
-    private float cost;
+    private String Product;
+    private String Fabricator;
+    private int Id;
+    private int Quantity;
+    private int Price;
 
     @Override
     public String toString() {
-        return "ElectronicMaterial{" + "name=" + name + ", fabricator=" + fabricator + ", cost=" + cost + '}';
+        return "ElectronicMaterial{" + "Product=" + Product + ", Fabricator=" + Fabricator + ", Id=" + Id + ", Quantity=" + Quantity + ", Price=" + Price + '}';
     }
 
-    public ElectronicMaterial(String name, String fabricator, float cost) {
-        this.name = name;
-        this.fabricator = fabricator;
-        this.cost = cost;
+    public ElectronicMaterial(String Product, String Fabricator, int Id, int Quantity, int Price) {
+        this.Product = Product;
+        this.Fabricator = Fabricator;
+        this.Id = Id;
+        this.Quantity = Quantity;
+        this.Price = Price;
     }
 
     /**
-     * @return the name
+     * @return the Product
      */
-    public String getName() {
-        return name;
+    public String getProduct() {
+        return Product;
     }
 
     /**
-     * @param name the name to set
+     * @param Product the Product to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setProduct(String Product) {
+        this.Product = Product;
     }
 
     /**
-     * @return the fabricator
+     * @return the Fabricator
      */
     public String getFabricator() {
-        return fabricator;
+        return Fabricator;
     }
 
     /**
-     * @param fabricator the fabricator to set
+     * @param Fabricator the Fabricator to set
      */
-    public void setFabricator(String fabricator) {
-        this.fabricator = fabricator;
+    public void setFabricator(String Fabricator) {
+        this.Fabricator = Fabricator;
     }
 
     /**
-     * @return the cost
+     * @return the Id
      */
-    public float getCost() {
-        return cost;
+    public int getId() {
+        return Id;
     }
 
     /**
-     * @param cost the cost to set
+     * @param Id the Id to set
      */
-    public void setCost(float cost) {
-        this.cost = cost;
-    }
-    public String [] getArray(){
-        String [] information = {name,fabricator,String.valueOf(cost)};
-        return information;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
-   
+    /**
+     * @return the Quantity
+     */
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    /**
+     * @param Quantity the Quantity to set
+     */
+    public void setQuantity(int Quantity) {
+        this.Quantity = Quantity;
+    }
+
+    /**
+     * @return the Price
+     */
+    public int getPrice() {
+        return Price;
+    }
+
+    /**
+     * @param Price the Price to set
+     */
+    public void setPrice(int Price) {
+        this.Price = Price;
+    }
+    
 }

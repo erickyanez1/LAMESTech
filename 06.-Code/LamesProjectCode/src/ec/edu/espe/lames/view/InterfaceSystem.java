@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.lames.view;
 
+import ec.edu.espe.lames.controller.SystemController;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -133,6 +134,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
         });
 
         btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PnlButtonsLayout = new javax.swing.GroupLayout(PnlButtons);
         PnlButtons.setLayout(PnlButtonsLayout);
@@ -387,6 +393,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
         }
         this.txtTotalPrice.setText("");
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        //SystemController.view(txtAdatosSystem);
+    }//GEN-LAST:event_btnViewActionPerformed
 
     /**
      * @param args the command line arguments
