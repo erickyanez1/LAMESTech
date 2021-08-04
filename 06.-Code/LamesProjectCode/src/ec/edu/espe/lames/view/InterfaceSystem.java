@@ -93,6 +93,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
         });
 
         btnClear.setText("Clear");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Purchase Detail"));
 
@@ -276,6 +281,18 @@ public class InterfaceSystem extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnEnlistActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+        this.lstProducts.setSelectedIndex(0);
+        if(this.btnA.isSelected()){
+        }
+        if(this.btnB.isSelected()){  
+        }
+        this.txtQuantity.setText("");
+        this.txtPrice.setText("");
+        this.txtTotal.setText("");
+    }//GEN-LAST:event_btnClearActionPerformed
     DefaultTableModel model1 = new DefaultTableModel();
     public void arduinoPrice(){
         double price, total, quantity, id;
