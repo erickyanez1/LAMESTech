@@ -119,6 +119,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
         btnAdd.setText("Add");
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnTotalPrice.setText("Total Price");
         btnTotalPrice.addActionListener(new java.awt.event.ActionListener() {
@@ -373,6 +378,15 @@ public class InterfaceSystem extends javax.swing.JFrame {
         txtTotalPrice.setText("$ " + String.valueOf(sum1));
         
     }//GEN-LAST:event_btnTotalPriceActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        int x = this.model1.getRowCount();
+        for(int y = 0; y <=10;y++){
+            this.model1.removeRow(0);
+   
+        }
+        this.txtTotalPrice.setText("");
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**
      * @param args the command line arguments
