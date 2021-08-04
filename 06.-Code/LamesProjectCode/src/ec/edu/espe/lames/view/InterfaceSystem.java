@@ -5,7 +5,13 @@
  */
 package ec.edu.espe.lames.view;
 
-import ec.edu.espe.lames.controller.SystemController;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.Mongo;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -14,6 +20,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class InterfaceSystem extends javax.swing.JFrame {
 
+    DB db;
+    DBCollection tabla;
     /**
      * Creates new form InterfaceSystem
      */
@@ -26,6 +34,17 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.model1.addColumn("Quantity");
         this.model1.addColumn("Price");
         this.model1.addColumn("Total Price");
+        try {
+            Mongo mongo = new Mongo("Localhost",27017);
+            db=mongo.getDB("basededatos1");
+            tabla=db.getCollection("tabla");
+            //Product" : "Capacitor", "ID" : 2162, "Fabricator" : "B", "Cost" : "$0.60", "Quantity" : 2 }
+            
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(InterfaceSystem.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+        
 
     }
 
@@ -118,6 +137,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable1);
 
         btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -399,6 +423,18 @@ public class InterfaceSystem extends javax.swing.JFrame {
         //SystemController.view(txtAdatosSystem);
     }//GEN-LAST:event_btnViewActionPerformed
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        BasicDBObject document= new BasicDBObject();
+       document.put("Product","'"+ lstProducts.getToolTipText()+"'");
+       document.put("ID",txtId.getText());
+       document.put("Fabricator","'"+ btnA.getActionCommand()+"'");
+       document.put("Fabricator","'"+ btnB.getActionCommand()+"'");
+       document.put("Price","'"+txtPrice.getText()+"'");     
+       document.put("Quantity",txtQuantity.getText());
+       document.put("Total",txtTotal.getText());
+       tabla.insert(document);
+    }//GEN-LAST:event_btnAddActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -427,10 +463,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InterfaceSystem().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new InterfaceSystem().setVisible(true);
         });
     }
 
