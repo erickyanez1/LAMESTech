@@ -58,6 +58,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        txtTotalPrice = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JTextField();
         btnA = new javax.swing.JRadioButton();
@@ -119,6 +120,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
         btnDelete.setText("Delete");
 
         jButton3.setText("Total Price");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PnlButtonsLayout = new javax.swing.GroupLayout(PnlButtons);
         PnlButtons.setLayout(PnlButtonsLayout);
@@ -131,7 +137,9 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 .addComponent(btnDelete)
                 .addGap(154, 154, 154)
                 .addComponent(jButton3)
-                .addGap(124, 124, 124))
+                .addGap(18, 18, 18)
+                .addComponent(txtTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PnlButtonsLayout.setVerticalGroup(
             PnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +148,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 .addGroup(PnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(btnDelete)
-                    .addComponent(jButton3))
+                    .addComponent(jButton3)
+                    .addComponent(txtTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -345,6 +354,21 @@ public class InterfaceSystem extends javax.swing.JFrame {
         this.txtId.setText("");      
     }//GEN-LAST:event_btnClearActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        double sum;
+        double sum1 = 0;
+        int totalrow = jTable1.getRowCount();
+        totalrow -= 1;
+        
+        for(int i = 0; i <= (totalrow); i++){
+            sum = Double.parseDouble(String.valueOf(jTable1.getValueAt(i, 5)));
+            sum1 += sum;
+        }
+        txtTotalPrice.setText("$ " + String.valueOf(sum1));
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -406,5 +430,6 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txtTotal;
+    private javax.swing.JTextField txtTotalPrice;
     // End of variables declaration//GEN-END:variables
 }
