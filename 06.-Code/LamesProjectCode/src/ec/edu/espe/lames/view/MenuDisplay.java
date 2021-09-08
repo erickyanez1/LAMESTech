@@ -40,6 +40,8 @@ public class MenuDisplay extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(211, 240, 240));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -50,6 +52,8 @@ public class MenuDisplay extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 248, Short.MAX_VALUE)
         );
+
+        jMenuBar1.setBackground(new java.awt.Color(245, 212, 212));
 
         MnuExit.setText("Exit");
         MnuExit.addMouseListener(new java.awt.event.MouseAdapter() {
