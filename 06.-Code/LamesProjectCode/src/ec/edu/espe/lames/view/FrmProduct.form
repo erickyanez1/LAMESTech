@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JColorChooser" name="jColorChooser1">
+    </Component>
+    <Component class="javax.swing.JColorChooser" name="jColorChooser2">
+    </Component>
+    <Component class="javax.swing.JColorChooser" name="jColorChooser3">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -49,10 +57,14 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+<<<<<<< HEAD
           <Color blue="ff" green="cc" red="cc" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="cc" red="cc" type="rgb"/>
+=======
+          <Color blue="9e" green="bc" red="ef" type="rgb"/>
+>>>>>>> 5af90c27fb7723ab6b7e225295a475191502e94c
         </Property>
       </Properties>
 
@@ -397,10 +409,14 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+<<<<<<< HEAD
           <Color blue="cc" green="cc" red="ff" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="cc" red="cc" type="rgb"/>
+=======
+          <Color blue="fb" green="fb" red="b5" type="rgb"/>
+>>>>>>> 5af90c27fb7723ab6b7e225295a475191502e94c
         </Property>
       </Properties>
 

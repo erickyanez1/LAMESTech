@@ -27,6 +27,9 @@ public class FrmProduct extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jColorChooser1 = new javax.swing.JColorChooser();
+        jColorChooser2 = new javax.swing.JColorChooser();
+        jColorChooser3 = new javax.swing.JColorChooser();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -58,8 +61,12 @@ public class FrmProduct extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+<<<<<<< HEAD
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setForeground(new java.awt.Color(204, 204, 255));
+=======
+        jPanel1.setBackground(new java.awt.Color(239, 188, 158));
+>>>>>>> 5af90c27fb7723ab6b7e225295a475191502e94c
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
         jLabel1.setText("Product");
@@ -211,8 +218,12 @@ public class FrmProduct extends javax.swing.JFrame {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
+<<<<<<< HEAD
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setForeground(new java.awt.Color(204, 204, 255));
+=======
+        jPanel2.setBackground(new java.awt.Color(181, 251, 251));
+>>>>>>> 5af90c27fb7723ab6b7e225295a475191502e94c
 
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -317,6 +328,9 @@ public class FrmProduct extends javax.swing.JFrame {
     private javax.swing.JComboBox cmbLizardWire3;
     private javax.swing.JComboBox cmbLizardWire4;
     private javax.swing.JComboBox cmbTransistor;
+    private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JColorChooser jColorChooser2;
+    private javax.swing.JColorChooser jColorChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

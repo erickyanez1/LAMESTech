@@ -88,6 +88,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlText.setBackground(new java.awt.Color(255, 204, 204));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Inventory");
 
@@ -121,6 +123,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(211, 244, 244));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Purchase Detail"));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -135,6 +138,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
             }
         ));
         jScrollPane2.setViewportView(jTable1);
+
+        PnlButtons.setBackground(new java.awt.Color(236, 236, 151));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {

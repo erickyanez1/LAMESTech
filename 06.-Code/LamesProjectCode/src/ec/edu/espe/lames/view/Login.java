@@ -47,6 +47,8 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel1.setText("LAMESTECH");
 
@@ -109,6 +111,8 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel2.setBackground(new java.awt.Color(9, 185, 190));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel7.setText("Login System");
