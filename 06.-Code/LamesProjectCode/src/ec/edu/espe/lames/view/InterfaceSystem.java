@@ -123,7 +123,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(211, 244, 244));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Purchase Detail"));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -139,7 +139,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        PnlButtons.setBackground(new java.awt.Color(255, 204, 255));
+        PnlButtons.setBackground(new java.awt.Color(236, 236, 151));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
