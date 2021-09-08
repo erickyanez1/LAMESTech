@@ -18,6 +18,10 @@ public class ElectronicMaterial {
     private int Quantity;
     private int Price;
 
+    public ElectronicMaterial(String name, String fabricator, float cost) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public String toString() {
         return "ElectronicMaterial{" + "Product=" + Product + ", Fabricator=" + Fabricator + ", Id=" + Id + ", Quantity=" + Quantity + ", Price=" + Price + '}';
@@ -99,6 +103,10 @@ public class ElectronicMaterial {
      */
     public void setPrice(int Price) {
         this.Price = Price;
+    }
+
+    public String[] getArray() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
