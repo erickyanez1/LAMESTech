@@ -50,6 +50,8 @@ public class FrmContact extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(177, 231, 231));
+
         jLabel1.setText("Contact");
 
         jLabel2.setText("Phone");
@@ -95,6 +97,8 @@ public class FrmContact extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
+
+        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
 
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

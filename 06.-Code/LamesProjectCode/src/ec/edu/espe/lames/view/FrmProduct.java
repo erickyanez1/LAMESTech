@@ -27,6 +27,9 @@ public class FrmProduct extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jColorChooser1 = new javax.swing.JColorChooser();
+        jColorChooser2 = new javax.swing.JColorChooser();
+        jColorChooser3 = new javax.swing.JColorChooser();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -57,6 +60,8 @@ public class FrmProduct extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 153));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
         jLabel1.setText("Product");
@@ -208,6 +213,8 @@ public class FrmProduct extends javax.swing.JFrame {
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,6 +319,9 @@ public class FrmProduct extends javax.swing.JFrame {
     private javax.swing.JComboBox cmbLizardWire3;
     private javax.swing.JComboBox cmbLizardWire4;
     private javax.swing.JComboBox cmbTransistor;
+    private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JColorChooser jColorChooser2;
+    private javax.swing.JColorChooser jColorChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
