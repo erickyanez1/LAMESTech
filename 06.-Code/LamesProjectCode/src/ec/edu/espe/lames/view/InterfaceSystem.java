@@ -329,6 +329,10 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         arduinoPrice();
         batteryPrice();
+        capacitorPrice();
+        dipswitchPrice();
+        integratedPrice();
+        diodesPrice();
 
         if (this.btnA.isSelected()) {
             this.model1.addRow(new Object[]{this.lstProducts.getSelectedIndex(),
@@ -379,6 +383,79 @@ public class InterfaceSystem extends javax.swing.JFrame {
         }
 
     }
+    
+    public void capacitorPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 3) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+    
+    public void dipswitchPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 4) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+    
+    public void integratedPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 5) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+    
+    public void diodesPrice() {
+        double price, total, quantity, id;
+
+        if (lstProducts.getSelectedIndex() == 6) {
+
+            if (this.btnA.isSelected() || this.btnB.isSelected()) {
+
+                quantity = Double.parseDouble(this.txtQuantity.getText());
+                price = Double.parseDouble(this.txtPrice.getText());
+                total = price * quantity;
+                this.txtTotal.setText(String.valueOf(total));
+            }
+
+        }
+
+    }
+    
+    
+    
+    
+    
 
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
