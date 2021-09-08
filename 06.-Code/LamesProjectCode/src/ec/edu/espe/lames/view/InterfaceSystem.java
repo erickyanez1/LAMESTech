@@ -425,7 +425,8 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         BasicDBObject document= new BasicDBObject();
-       document.put("Product","'"+ lstProducts.getToolTipText()+"'");
+     //  document.put("Product","'"+ lstProducts.getToolTipText()+"'");
+       document.put("Product", lstProducts.getName() );
        document.put("ID",txtId.getText());
        document.put("Fabricator","'"+ btnA.getActionCommand()+"'");
        document.put("Fabricator","'"+ btnB.getActionCommand()+"'");
