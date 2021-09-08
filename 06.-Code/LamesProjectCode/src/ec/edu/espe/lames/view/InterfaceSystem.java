@@ -502,7 +502,12 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         BasicDBObject document= new BasicDBObject();
-       document.put("Product","'"+ lstProducts.getToolTipText()+"'");
+<<<<<<< HEAD
+       document.put("Product","'"+ lstProducts.getUIClassID()+"'");
+=======
+     //  document.put("Product","'"+ lstProducts.getToolTipText()+"'");
+       document.put("Product", lstProducts.getName() );
+>>>>>>> 3c2f4a6bf9107df3fc0133fcdabbc1ef9f581c14
        document.put("ID",txtId.getText());
        document.put("Fabricator","'"+ btnA.getActionCommand()+"'");
        document.put("Fabricator","'"+ btnB.getActionCommand()+"'");
