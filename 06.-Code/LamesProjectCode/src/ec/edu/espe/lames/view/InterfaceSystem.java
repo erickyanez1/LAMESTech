@@ -100,14 +100,31 @@ public class InterfaceSystem extends javax.swing.JFrame {
                 txtIdActionPerformed(evt);
             }
         });
+        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIdKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("ID:");
 
         jLabel4.setText("Price:");
 
+        txtQuantity.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtQuantityKeyTyped(evt);
+            }
+        });
+
         jLabel5.setText("Fabricator:");
 
         jLabel6.setText("Quantity");
+
+        txtPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPriceKeyTyped(evt);
+            }
+        });
 
         btnEnlist.setText("Enlist");
         btnEnlist.addActionListener(new java.awt.event.ActionListener() {
@@ -546,6 +563,27 @@ public class InterfaceSystem extends javax.swing.JFrame {
         if ((c < 'a' || c > 'z') && (c<'A' || c > 'Z') && (c != ' '))evt.consume();
 
     }//GEN-LAST:event_txtProductsKeyTyped
+
+    private void txtIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyTyped
+        char c = evt.getKeyChar();
+        
+        if ((c < '0' || c > '9'))evt.consume();
+
+    }//GEN-LAST:event_txtIdKeyTyped
+
+    private void txtQuantityKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtQuantityKeyTyped
+        char c = evt.getKeyChar();
+        
+        if ((c < '0' || c > '9'))evt.consume();
+
+    }//GEN-LAST:event_txtQuantityKeyTyped
+
+    private void txtPriceKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPriceKeyTyped
+        char c = evt.getKeyChar();
+        
+        if ((c < '0' || c > '9'))evt.consume();
+
+    }//GEN-LAST:event_txtPriceKeyTyped
 
     /**
      * @param args the command line arguments
