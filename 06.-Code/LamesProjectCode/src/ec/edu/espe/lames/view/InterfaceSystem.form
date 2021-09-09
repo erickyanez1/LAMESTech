@@ -399,6 +399,9 @@
           </SubComponents>
         </Container>
         <Component class="javax.swing.JTextField" name="txtProducts">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtProductsKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

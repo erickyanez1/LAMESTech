@@ -228,6 +228,12 @@ public class InterfaceSystem extends javax.swing.JFrame {
         jEditorPane1.setText("Products available\n1. Arduino\n2. Battery(9V)\n3. Capacitor\n4. Dispswitch\n5. Integrated Circuit\n6. Led Diodes\n7. Lizard Wire\n8. Multimeter\n9. Potenciometer\n10. Protoboard\n11. Resistor\n12. Transistor\n13. UTP Cable");
         jScrollPane3.setViewportView(jEditorPane1);
 
+        txtProducts.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtProductsKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout PnlTextLayout = new javax.swing.GroupLayout(PnlText);
         PnlText.setLayout(PnlTextLayout);
         PnlTextLayout.setHorizontalGroup(
@@ -241,11 +247,10 @@ public class InterfaceSystem extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PnlTextLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3)
-                            .addGroup(PnlTextLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel5)))
+                            .addComponent(jLabel5))
                         .addGap(29, 29, 29)
                         .addGroup(PnlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnB)
@@ -534,6 +539,13 @@ public class InterfaceSystem extends javax.swing.JFrame {
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdActionPerformed
+
+    private void txtProductsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProductsKeyTyped
+        char c = evt.getKeyChar();
+        
+        if ((c < 'a' || c > 'z') && (c<'A' || c > 'Z') && (c != ' '))evt.consume();
+
+    }//GEN-LAST:event_txtProductsKeyTyped
 
     /**
      * @param args the command line arguments
