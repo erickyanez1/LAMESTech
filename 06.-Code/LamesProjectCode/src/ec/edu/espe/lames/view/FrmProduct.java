@@ -95,19 +95,19 @@ public class FrmProduct extends javax.swing.JFrame {
 
         cmbDipswitch.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Slide Dipswitch", "Rotary Dipswitch", "Piano Dipswitch", "Rocket Dipswitch", " " }));
 
-        cmbLizardWire1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLizardWire1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Analog Multimeter.", "Digital Multimeter.", "Fluke Multimeter.", "Clamp Type.", "Autoranging Type." }));
 
-        cmbLizardWire2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLizardWire2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Linear", "Rotary" }));
 
-        cmbLizardWire3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLizardWire3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fixed", "Agglomerates", "Carbon Layer Resistors", "Metal resistors" }));
 
-        cmbLizardWire4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLizardWire4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Large ", "Medium ", "Small" }));
 
-        cmbTransistor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbTransistor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "punctual contact.", "bipolar junction.", "field effect" }));
 
-        cmbLedDiodes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLedDiodes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "LED DIP", "LED SMD", "LED COB" }));
 
-        cmbIntegratedCircuit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbIntegratedCircuit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SSI (Small Scale Integration)", "MSI (Medium Scale Integration).", "LSI (Large Scale Integration)", "VLSI (Very Large Scale Integration)" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
