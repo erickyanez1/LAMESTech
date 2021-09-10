@@ -17,41 +17,59 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTextArea;
 
+
+/*import com.mongodb.MongoClientSettings;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;*/
+
+
+
 /**
  *
  * @author Alina Villavicencio LAMESTech ESPE-DCCO
  */
 public class SystemController {
-     DB Database;
+
+    DB Database;
     DBCollection collection;
     BasicDBObject document = new BasicDBObject();
-    
-    public SystemController(){
+
+    public SystemController() {
         try {
+
+           /* ConnectionString connectionString = new ConnectionString("mongodb+srv://LAMESTech:<password>@clusterlames.22ors.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            MongoClientSettings settings = MongoClientSettings.builder().applyConnectionString(connectionString).build();
+            MongoClient mongoClient = MongoClients.create(settings);
+            MongoDatabase database = mongoClient.getDatabase("test");*/
+
+           //Mongo mongo = new Mongo("localhost", 27017);
             Mongo mongo = new Mongo("localhost", 27017);
+            //mongodb+srv://LAMESTech:<password>@clusterlames.22ors.mongodb.net/test
             Database = mongo.getDB("to user");
             collection = Database.getCollection("login");
             System.out.println("The connection has been made successfully");
-        } catch (UnknownHostException ex){
+            
+        } catch (UnknownHostException ex) {
             Logger.getLogger(SystemController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public boolean add (String Product, String Fabricator, Integer Id, Integer Quantity, Integer Price  ){
-      ArrayList<ElectronicMaterial> electronicMaterial = new ArrayList<ElectronicMaterial>(); 
-      
-     electronicMaterial.add(new ElectronicMaterial(Product, Fabricator, Id, Quantity, Price));
-     for (ElectronicMaterial pueC : electronicMaterial){
-         //collection.insert(pueC.)
-     }
-      return true;   
+
+    public boolean add(String Product, String Fabricator, Integer Id, Integer Quantity, Integer Price) {
+        ArrayList<ElectronicMaterial> electronicMaterial = new ArrayList<ElectronicMaterial>();
+
+        electronicMaterial.add(new ElectronicMaterial(Product, Fabricator, Id, Quantity, Price));
+        for (ElectronicMaterial pueC : electronicMaterial) {
+            //collection.insert(pueC.)
+        }
+        return true;
     }
-    
-    public void view(JTextArea txtArea){
+
+    public void view(JTextArea txtArea) {
         DBCursor cursor = collection.find();
-        try{
-            while (cursor.hasNext()){
-                txtArea.setText(txtArea.getText()+ "\n" + cursor.next().toString());
+        try {
+            while (cursor.hasNext()) {
+                txtArea.setText(txtArea.getText() + "\n" + cursor.next().toString());
             }
         } finally {
             cursor.close();
