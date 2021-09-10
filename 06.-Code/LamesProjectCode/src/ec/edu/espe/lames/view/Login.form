@@ -180,7 +180,14 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLogin">
           <Properties>
+<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="Login"/>
+=======
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Pamela Yugsi"/>
+>>>>>>> 839c84a34514a102d93146c44d356fd5c7f8460c
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnLoginMouseClicked"/>

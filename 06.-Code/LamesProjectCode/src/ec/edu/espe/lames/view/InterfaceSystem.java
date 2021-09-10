@@ -96,7 +96,11 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+<<<<<<< HEAD
         JPanel.setBackground(new java.awt.Color(204, 204, 204));
+=======
+        PnlText.setBackground(new java.awt.Color(102, 255, 204));
+>>>>>>> 839c84a34514a102d93146c44d356fd5c7f8460c
 
         jLabel1.setFont(new java.awt.Font("Sitka Text", 2, 36)); // NOI18N
         jLabel1.setText("Inventory");
@@ -181,7 +185,26 @@ public class InterfaceSystem extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
+<<<<<<< HEAD
         btnTotalPrice.setFont(new java.awt.Font("Sitka Text", 0, 13)); // NOI18N
+=======
+        PnlButtons.setBackground(new java.awt.Color(204, 255, 204));
+
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
+        btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+
+>>>>>>> 839c84a34514a102d93146c44d356fd5c7f8460c
         btnTotalPrice.setText("Total Price");
         btnTotalPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
