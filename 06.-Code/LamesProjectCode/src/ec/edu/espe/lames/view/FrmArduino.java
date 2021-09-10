@@ -36,7 +36,7 @@ public class FrmArduino extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 204));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel1.setText("Arduino");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -46,7 +46,7 @@ public class FrmArduino extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(151, 151, 151)
                 .addComponent(jLabel1)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

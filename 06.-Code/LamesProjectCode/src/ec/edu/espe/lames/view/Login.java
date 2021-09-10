@@ -62,7 +62,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("Alina Villavicencio");
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel5.setText("Maria Yugsi");
+        jLabel5.setText("Pamela Yugsi");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel6.setText("Erick Yánez");
