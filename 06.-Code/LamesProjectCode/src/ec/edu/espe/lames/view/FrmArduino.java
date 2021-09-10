@@ -43,7 +43,7 @@ public class FrmArduino extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("- Microcontrolador: Inter Courie (32 bits).\n- Velocidad de reloj: 32 MHz.\n- Voltaje de trabajo: 3,3V.\n- Voltaje de entrada: 7,5 a 12 voltios.\n- Pinout: 14 pines digitales (4 PWM) y 6 pines analógicos.\n- 1 puerto serie por hardware.\n- Memoria: 196 KB Flash y 24 KB RAM.");
+        jTextArea1.setText("- Microcontroller: Inter Courie (32 bits).\n- Clock speed: 32 MHz.\n- Working voltage: 3.3V.\n- Input voltage: 7.5 to 12 volts.\n- Pinout: 14 digital pins (4 PWM) and 6 analog pins.\n- 1 serial port per hardware.\n- Memory: 196 KB Flash and 24 KB RAM.");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

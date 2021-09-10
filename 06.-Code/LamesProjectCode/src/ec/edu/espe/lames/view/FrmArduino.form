@@ -103,7 +103,7 @@
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="- Microcontrolador: Inter Courie (32 bits).&#xa;- Velocidad de reloj: 32 MHz.&#xa;- Voltaje de trabajo: 3,3V.&#xa;- Voltaje de entrada: 7,5 a 12 voltios.&#xa;- Pinout: 14 pines digitales (4 PWM) y 6 pines anal&#xf3;gicos.&#xa;- 1 puerto serie por hardware.&#xa;- Memoria: 196 KB Flash y 24 KB RAM."/>
+                <Property name="text" type="java.lang.String" value="- Microcontroller: Inter Courie (32 bits).&#xa;- Clock speed: 32 MHz.&#xa;- Working voltage: 3.3V.&#xa;- Input voltage: 7.5 to 12 volts.&#xa;- Pinout: 14 digital pins (4 PWM) and 6 analog pins.&#xa;- 1 serial port per hardware.&#xa;- Memory: 196 KB Flash and 24 KB RAM."/>
               </Properties>
             </Component>
           </SubComponents>
