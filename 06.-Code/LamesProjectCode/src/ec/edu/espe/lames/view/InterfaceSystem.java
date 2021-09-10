@@ -88,7 +88,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        PnlText.setBackground(new java.awt.Color(255, 204, 204));
+        PnlText.setBackground(new java.awt.Color(102, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Inventory");
@@ -156,7 +156,7 @@ public class InterfaceSystem extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        PnlButtons.setBackground(new java.awt.Color(236, 236, 151));
+        PnlButtons.setBackground(new java.awt.Color(204, 255, 204));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
